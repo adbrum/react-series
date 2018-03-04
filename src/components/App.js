@@ -19,7 +19,7 @@ const dados = {
 
 export default class App extends React.Component {
     render() {
-        return <PlacarContainer {...dados}
+        return <PlacarContainer {...dados} tempo={92}
         />
     }
 }

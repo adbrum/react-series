@@ -6,19 +6,20 @@ export default class PlacarContainer extends React.Component {
     constructor() {
         super();
         this.state = {
-            gols_casa : 0,
-            gols_visitante : 0,
+            gols_casa: 0,
+            gols_visitante: 0,
         };
     }
 
-    marcarGolCasa(){
+    marcarGolCasa() {
         this.setState({
-            gols_casa: this.state.gols_casa +1,
+            gols_casa: this.state.gols_casa + 1,
         })
     };
-    marcarGolVisitante(){
+
+    marcarGolVisitante() {
         this.setState({
-            gols_visitante: this.state.gols_visitante +1,
+            gols_visitante: this.state.gols_visitante + 1,
         })
     };
 
@@ -50,3 +51,14 @@ export default class PlacarContainer extends React.Component {
         );
     }
 }
+
+// Declaração de quais propriedades que este componente precisa par funcionar.
+PlacarContainer.propeTypes = {
+    clima: React.PropTypes.string,
+    tempo: React.PropTypes.number.isRequired,
+};
+
+// Passando valor padrão para o funcionamento.
+PlacarContainer.defaultProps = {
+    clima: 'Ensolarado',
+};
