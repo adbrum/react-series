@@ -1,14 +1,2 @@
-.DS_Store
 .idea
-venv
-*.db
-*.pyc
-__pycache__
-.ipynb_checkpoints/
-.directory
-migrations
-staticfiles
-.project
-.pydevproject
-*.csv
-.settings/
+node_modules
